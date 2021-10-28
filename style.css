@@ -1,0 +1,676 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/markus-spiske-Skf7HxARcoc-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align:center;
+}
+    .header p {
+        color: crimson;
+        font-size: 40px;
+        font-family: 'Lucida Calligraphy';
+        font-weight: 600;
+    }
+
+    nav {
+       display:flex;
+       padding:2% 6%;
+       justify-content:space-between;
+       align-items:center;
+    }
+       
+
+ .nav-links {
+     flex:1;
+     text-align:right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+        
+    }
+
+    .nav-links ul li a {
+        color:white;
+        text-decoration:none;
+        font-size:17px;
+    }
+
+    .nav-links ul li::after{
+        content:'';
+        width:0%;
+        height:2px;
+        background:#f44336;
+        display:block;
+        margin:auto;
+        transition:0.5s;
+    }
+
+    .nav-links ul li:hover::after{
+       width:100%;
+    }
+
+.container {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    
+}
+    .container .row {
+        display: flex;
+        position:relative;
+        margin:auto;
+        align-items:center;
+    }
+    .container h1 {
+        padding-top: 100px;
+        font-size: 40px;
+        
+    }
+    .container h1 p {
+        color:orangered;
+    }
+        .container .home-img{
+        flex:2 2 100%;
+        max-width:100%;
+        padding:0 15px;
+    }
+
+    .container .home-img .img-box {
+        background-color:cornflowerblue;
+        max-width:400px;
+        max-height:321px;
+        margin:auto;
+        border-radius:50%;
+    }
+
+        .container .home-img .img-box img {
+            width:100%;
+            border-radius: 50%;
+        }
+        nav .fa{
+        display:none;
+    }
+
+
+    @media(max-width:700px) {
+
+        .header p {
+            font-size: 40px;
+            text-align: left;
+        }
+
+        .text-box h1 {
+            font-size: 20px;
+        }
+
+        .nav-links ul li {
+            display: block;
+        }
+
+        .nav-links {
+            position: absolute;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+        }
+
+        nav .fa {
+            display: block;
+            color: #fff;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .container .home-img .img-box {
+            
+            max-width: 400px;
+            max-height: 198px;
+            
+        }
+
+        .nav-links ul {
+            padding: 30px;
+        }
+        .container h1 {
+            padding-top: 5px;
+            font-size: 25px;
+        }
+            .container h1 p {
+                margin-left:40px;
+                font-size:30px;
+            }
+    }
+
+    .about {
+        min-height: 70vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/pexels-anthony-shkraba-4348401.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .text-box1 {
+        width: 90%;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+    /*----------------project section styling start-------------*/
+
+    .speciality {
+        min-height: 160vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/marvin-meyer-SYTO3xs06fU-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    h2 {
+        color: crimson;
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        position: relative;
+        cursor: pointer;
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .speciality .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+        .speciality .box-container .box {
+            flex: 1 1 30rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+            border: .1rem solid rgba(0,0,0,.3);
+            cursor: pointer;
+            border-radius: .5rem;
+        }
+
+            .speciality .box-container .box .image {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: -100%;
+                left: 0;
+            }
+
+            .speciality .box-container .box .content {
+                text-align: center;
+                background: #fff;
+                padding: 2rem;
+            }
+
+                .speciality .box-container .box .content img {
+                    margin: 1.5rem 0;
+                }
+
+                .speciality .box-container .box .content h3 {
+                    font-size: 2.5rem;
+                    color: #333;
+                }
+
+                .speciality .box-container .box .content p {
+                    font-size: 1.6rem;
+                    color: #666;
+                    padding: 1rem 0;
+                }
+
+            .speciality .box-container .box:hover .image {
+                top: 0;
+            }
+
+            .speciality .box-container .box:hover .content {
+                transform: translateY(100%);
+            }
+
+    @media(max-width:700px) {
+        .speciality .box-container .box .content h3 {
+            font-size: 1.4rem;
+        }
+
+        .speciality .box-container .box .content p {
+            font-size: 1rem;
+        }
+    }
+    /*----------------project section styling end---------------*/
+    /* skills section styling */
+    .skills {
+        min-height: 120vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(Images/pexels-anthony-shkraba-4348404.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    h4 {
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        position: relative;
+        cursor: pointer;
+        font-size: 36px;
+        font-weight: 600;
+        color: crimson;
+        text-align: center;
+    }
+
+    .skills .skills-content .column {
+        margin-top: 100px;
+        width: 80%;
+        color: white;
+        text-align: center;
+    }
+
+    .skills .skills-content .left .text {
+        font-size: 20px;
+        color: white;
+        margin:auto;
+        margin-left: 240px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+
+
+.skills .skills-content .left a {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    margin-left: 240px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+        .skills .skills-content .left a:hover {
+            color: crimson;
+            background: none;
+        }
+
+    .skills .skills-content .right .bars {
+        margin-bottom: 15px;
+        margin-left: 100px;
+    }
+
+    .skills .skills-content .right .info {
+        display: flex;
+        margin-left: 100px;
+        margin-bottom: 5px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .skills .skills-content .right span {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .skills .skills-content .right .line {
+        height: 5px;
+        width: 100%;
+        background: lightgrey;
+        position: relative;
+    }
+
+        .skills .skills-content .right .line::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: crimson;
+        }
+
+    .skills-content .right .html::before {
+        width: 70%;
+    }
+
+    .skills-content .right .css::before {
+        width: 60%;
+    }
+
+    .skills-content .right .js::before {
+        width: 40%;
+    }
+
+    .skills-content .right .php::before {
+        width: 50%;
+    }
+
+    .skills-content .right .mysql::before {
+        width: 60%;
+    }
+
+    .skills-content .right .python::before {
+        width: 25%;
+    }
+
+    .skills-content .right .rjs::before {
+        width: 20%;
+    }
+
+    .skills-content .right .pshop::before {
+        width: 60%;
+    }
+
+    .skills-content .right .wp::before {
+        width: 60%;
+    }
+
+
+@media(max-width:700px) {
+    .skills .skills-content .left .text {
+        margin-left:100px;
+    }
+
+
+
+    .skills .skills-content .left a {
+        margin-left: 100px;
+    }
+
+}
+
+    /*-----------------service section styling start-----------------*/
+
+    .service {
+        min-height: 87vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/pexels-adrien-olichon-3137076.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        text-align: center;
+    }
+
+        .service .heading {
+            margin-top: 50px;
+            display: inline-block;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            position: relative;
+            cursor: pointer;
+            font-size: 36px;
+            font-weight: 600;
+            color: crimson;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .service .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+            .service .box-container .box {
+                flex: 1 1 30rem;
+                position: relative;
+                overflow: hidden;
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+                border: .1rem solid rgba(0,0,0,.3);
+                cursor: pointer;
+                border-radius: .5rem;
+            }
+
+                .service .box-container .box .image {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                }
+
+                .service .box-container .box .content {
+                    text-align: center;
+                    background: #fff3f3;
+                    padding: 2rem;
+                }
+
+                    .service .box-container .box .content img {
+                        margin: 1.5rem 0;
+                    }
+
+                    .service .box-container .box .content h3 {
+                        font-size: 2.5rem;
+                        color: #333;
+                    }
+
+                    .service .box-container .box .content p {
+                        font-size: 1.6rem;
+                        color: #666;
+                        padding: 1rem 0;
+                    }
+
+                .service .box-container .box:hover .image {
+                    top: 0;
+                }
+
+                .service .box-container .box:hover .content {
+                    transform: translateY(100%);
+                }
+
+    @media(max-width:700px) {
+        .service .box-container .box .content h3 {
+            font-size: 1.5rem;
+        }
+
+        .service .box-container .box .content p {
+            font-size: 1rem;
+        }
+    }
+
+    /*-----------------service section styling end-----------------*/
+
+    /*-----------------contact section styling start-----------------*/
+
+    .contact {
+        min-height: 155vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/pexels-adrien-olichon-3137076.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        text-align:center;
+    }
+
+    h8 {
+        margin-top: 50px;
+        display: inline-block;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        position: relative;
+        cursor: pointer;
+        font-size: 36px;
+        font-weight: 600;
+        color: crimson;
+        text-align: center;
+        margin-bottom: 30px;
+       
+    }
+.touch {
+    color:gold;
+    font-size: 36px;
+    margin-left: -1000px;
+    font-weight: 600;
+    margin-bottom:20px;
+}
+
+    .contact .row i {
+        font-size: 40px;
+        color: darkorange;
+        margin-right:1200px;
+        
+    }
+
+    .contact .row .info {
+        margin: auto;
+        margin-left: 100px;
+    }
+
+    .contact .info .head {
+        font-weight: 400;
+        font-size: 30px;
+        color: deepskyblue;
+        text-align: justify;
+    }
+
+    .contact .info .sub-title {
+        color: white;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .contact .icons {
+        padding-top: 80px;
+        font-size: 30px;
+        margin: 0 20px;
+        color: gold;
+        cursor: pointer;
+    }
+
+    @media(max-width:700px) {
+
+        .touch {
+           margin-left:-200px;
+            font-size: 25px;
+            margin-bottom:20px;
+            
+        }
+        .contact .row i {
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .contact .info .head {
+            font-size: 17px;
+            margin-top: -30px;
+        }
+
+        .contact .info .sub-title {
+            font-size: 14px;
+            margin-top: -3px;
+        }
+    }
+
+
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+
+        .icons a {
+            height: 100px;
+            width: 100px;
+            background: #f5f6fa;
+            border-radius: 50px;
+            text-align: center;
+            margin: 10px;
+            line-height: 120px;
+            box-shadow: 1px 4px 2px 2px #dcdde1;
+        }
+
+            .icons a i {
+                transition: all 0.3s linear;
+            }
+
+            .icons a:hover i {
+                transform: scale(1.4);
+            }
+
+    .fa-instagram {
+        color: black;
+    }
+
+    .fa-twitter {
+        color: #00acee;
+    }
+
+    .fa-youtube {
+        color: red;
+    }
+
+    .fa-linkedin {
+        color: #0097e6;
+    }
+
+    .fa-github {
+        color: black;
+    }
+
+    .footer {
+        margin-top: 50px;
+        text-align: center;
+        color: deepskyblue;
+    }
+
+    @media(max-width:700px) {
+
+        .contact {
+            min-height: 105vh;
+        }
+            .contact .row i {
+               
+               
+                margin-right:350px;
+            }
+
+        .icons a {
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            line-height: 50px;
+        }
+
+            .icons a i {
+                font-size: 30px;
+            }
+    }
+    /*-----------------contact section styling start-----------------*/
+
