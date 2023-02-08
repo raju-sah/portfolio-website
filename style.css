@@ -510,167 +510,122 @@
 
     /*-----------------contact section styling start-----------------*/
 
-    .contact {
-        min-height: 155vh;
-        width: 100%;
-        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/pexels-adrien-olichon-3137076.jpg);
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        text-align:center;
-    }
-
-    h8 {
-        margin-top: 50px;
-        display: inline-block;
-        border: 1px solid #fff;
-        padding: 12px 34px;
-        position: relative;
-        cursor: pointer;
-        font-size: 36px;
-        font-weight: 600;
-        color: crimson;
-        text-align: center;
-        margin-bottom: 30px;
-       
-    }
-.touch {
-    color:gold;
-    font-size: 36px;
-    margin-left: -1000px;
-    font-weight: 600;
-    margin-bottom:20px;
+    
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-    .contact .row i {
-        font-size: 40px;
-        color: darkorange;
-        margin-right:1200px;
-        
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 22px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+color: #ff004f;
+transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+
+}
+
+
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 90%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .bt2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 170px;
+
+}
+
+
+.copyright i{
+    color: #ff004f;
+    
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
     }
 
-    .contact .row .info {
-        margin: auto;
-        margin-left: 100px;
-    }
-
-    .contact .info .head {
-        font-weight: 400;
-        font-size: 30px;
-        color: deepskyblue;
-        text-align: justify;
-    }
-
-    .contact .info .sub-title {
-        color: white;
-        font-size: 20px;
-        text-align: justify;
-    }
-
-    .contact .icons {
-        padding-top: 80px;
-        font-size: 30px;
-        margin: 0 20px;
-        color: gold;
-        cursor: pointer;
-    }
-
-    @media(max-width:700px) {
-
-        .touch {
-           margin-left:-200px;
-            font-size: 25px;
-            margin-bottom:20px;
-            
-        }
-        .contact .row i {
-            font-size: 30px;
-            margin-top: 10px;
-        }
-
-        .contact .info .head {
-            font-size: 17px;
-            margin-top: -30px;
-        }
-
-        .contact .info .sub-title {
-            font-size: 14px;
-            margin-top: -3px;
-        }
-    }
+}
 
 
-    .icons {
-        display: flex;
-        justify-content: center;
-    }
-
-        .icons a {
-            height: 100px;
-            width: 100px;
-            background: #f5f6fa;
-            border-radius: 50px;
-            text-align: center;
-            margin: 10px;
-            line-height: 120px;
-            box-shadow: 1px 4px 2px 2px #dcdde1;
-        }
-
-            .icons a i {
-                transition: all 0.3s linear;
-            }
-
-            .icons a:hover i {
-                transform: scale(1.4);
-            }
-
-    .fa-instagram {
-        color: black;
-    }
-
-    .fa-twitter {
-        color: #00acee;
-    }
-
-    .fa-youtube {
-        color: red;
-    }
-
-    .fa-linkedin {
-        color: #0097e6;
-    }
-
-    .fa-github {
-        color: black;
-    }
-
-    .footer {
-        margin-top: 50px;
-        text-align: center;
-        color: deepskyblue;
-    }
-
-    @media(max-width:700px) {
-
-        .contact {
-            min-height: 105vh;
-        }
-            .contact .row i {
-               
-               
-                margin-right:350px;
-            }
-
-        .icons a {
-            height: 50px;
-            width: 50px;
-            border-radius: 25px;
-            line-height: 50px;
-        }
-
-            .icons a i {
-                font-size: 30px;
-            }
-    }
+#msg{
+    color: #61b752;
+    margin-top: 5px;
+    display: block;
+}
     /*-----------------contact section styling start-----------------*/
 
