@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
-    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/03ee3287ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -231,65 +231,79 @@
 
     <!--------------contact section----------->
 
-    <section class="contact" id="contact">
-        <h8>Contact Me</h8><br />
-        <br />
-        <p class="touch">Get in Touch:</p>
-        <div class="row">
+    <div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Get in Touch:</h1>
+        <p><i class="fa-solid fa-envelope"></i>rajusah0318@gmail.com</p>
+        <p> <i class="fa-solid fa-square-phone"></i>9823852524,9863464669</p>
+        <p>  <i class="fa-solid fa-location-dot"></i>Kirtipur, Kathmandu</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100027097443603" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com/okay.raju?igshid=NTA5ZTk1NTc=" target="_blank">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a href="https://twitter.com/rajusah0" target="_blank">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        <a href="https://youtube.com/c/AlphaCann" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/raju-sah-398951220/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
 
-            <i class="fa fa-user"></i>
-            <div class="info">
-                <div class="head">Name</div>
-                <div class="sub-title">Raju Sah</div>
-            </div>
+        <a href="https://github.com/raju-sah" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
         </div>
-        <div class="row">
-            <i class="fa fa-map-marker"></i>
-            <div class="info">
-                <div class="head">Address</div>
-                <div class="sub-title">Kirtipur, Kathmandu</div>
-            </div>
-        </div>
-        <div class="row">
-            <i class="fa fa-mobile"></i>
-            <div class="info">
-                <div class="head">Mobile Number</div>
-                <div class="sub-title">9823852524, 9863464669</div>
-            </div>
-        </div>
-        <div class="row">
-            <i class="fa fa-envelope"></i>
-            <div class="info">
-                <div class="head">Email</div>
-                <div class="sub-title">rajusah0318@gmail.com</div>
-            </div>
-        </div>
+      </div>
 
-        <div class="icons">
-            <a href="https://www.facebook.com/profile.php?id=100027097443603" target="_blank">
-                <i class="fa fa-2x fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/alpha_cann/" target="_blank">
-                <i href="#" class="fa fa-2x fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/rajusah0" target="_blank">
-                <i href="#" class="fa fa-2x fa-twitter"></i>
-            </a>
-            <a href="https://youtube.com/c/AlphaCann" target="_blank">
-                <i href="#" class="fa fa-2x fa-youtube"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/raju-sah-398951220/" target="_blank">
-                <i href="#" class="fa fa-2x fa-linkedin"></i>
-            </a>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
 
-            <a href="https://github.com/raju-sah" target="_blank">
-                <i href="#" class="fa fa-2x fa-github"></i>
-            </a>
-            <br />
-        </div>
-            <div class="footer">Copyright &copy;2021 Raju Sah. All Right Reserved.</div>
-       
-    </section>
+  <div class="copyright">
+    <p>Copyright ©2021 Raju Sah. Made with <i class="fa-solid fa-heart"></i> by Raju Sah.</p>
+  </div>
+</div>
+	
+
+
+
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxn9jdsTSPbfVUGcv2LrAMp61XtgERp3jshRoLCLnNw_LfMjrk02vc3J963pKtjnx1r6g/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 
 
