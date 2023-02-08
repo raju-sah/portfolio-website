@@ -510,6 +510,15 @@
 
     /*-----------------contact section styling start-----------------*/
 
+.contact {
+        min-height: 155vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/pexels-adrien-olichon-3137076.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        text-align:center;
+    }
     
 .row{
     display: flex;
