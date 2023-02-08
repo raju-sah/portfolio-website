@@ -74,8 +74,8 @@
     .container .row {
         display: flex;
         position:relative;
-        margin:auto;
         align-items:center;
+        margin:auto;
     }
     .container h1 {
         padding-top: 100px;
@@ -510,7 +510,7 @@
 
     /*-----------------contact section styling start-----------------*/
 
-.contact {
+#contact {
         min-height: 155vh;
         width: 100%;
         background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/pexels-adrien-olichon-3137076.jpg);
