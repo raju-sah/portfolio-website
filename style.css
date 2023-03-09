@@ -280,15 +280,15 @@ nav .fa {
   }
   .imgbox {
     position: absolute;
-    bottom: -15em;
+    bottom: -17em;
   }
 
   .imgbox img {
     height: 1vh;
-    width: 53%;
-    height: calc(50% - 20px);
+    width: 52%;
+    height: calc(45% - 60px);
 
-    right: 150px;
+    right: 125px;
   }
 }
 
